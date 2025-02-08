@@ -1,0 +1,17 @@
+The solution is to ensure consistent units within the `calc()` function.  Instead of subtracting a percentage from a pixel value, we can either calculate the pixel value of 50% relative to the parent element or change the subtraction to use pixels.
+
+Here's a corrected version:
+
+```css
+div {
+  /* Option 1: Calculate 50% based on parent */
+  width: calc(300px - 50vw); 
+  /* Option 2: use pixels */
+  /* width: calc(300px - 150px); /* Assuming parent width is 300px */ */
+}
+```
+
+**Explanation:**
+
+* **Option 1:** Uses `vw` (viewport width), a unit relative to the viewport.  This allows for subtracting a percentage representing the viewport width from the fixed pixel value. 
+* **Option 2:** Directly uses a pixel value.  This requires knowing the intended value for the percentage or using a calculation to determine it in advance.
