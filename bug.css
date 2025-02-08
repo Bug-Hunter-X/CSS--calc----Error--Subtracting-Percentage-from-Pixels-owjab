@@ -1,0 +1,7 @@
+The following CSS code snippet demonstrates an issue where the `calc()` function is used incorrectly to calculate the width of an element.  The calculation attempts to subtract a percentage from a pixel value, resulting in unexpected behavior or an error in some browsers.
+
+```css
+div {
+  width: calc(300px - 50%);
+}
+```
